@@ -1,0 +1,13 @@
+@mixin headercode($bgcolor, $textcolor) {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $bgcolor;
+  h1,
+  h2,
+  h3 {
+    color: $textcolor;
+  }
+}

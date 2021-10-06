@@ -1,0 +1,36 @@
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+body {
+  background-color: #222f3e;
+}
+//! variables
+$sitecolor: #2ecc71;
+
+//! operators opeators like +-*/
+//! Nesting
+//! Mixins
+//* we can also include mixins and variables from others files which are calleda s partials. these files are compiled into other css file by sass and directly included in other sass files.
+
+header {
+  @include headercode(white, #2ecc71);
+  h1 {
+    margin: 0 auto;
+    font-size: 50px + 20px - 10px;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.header2 {
+  @include headercode(#f1c40f, #34495e);
+}
